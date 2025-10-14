@@ -274,3 +274,113 @@ footer.site-footer {
     gap: 20px;
   }
 }
+
+
+/* ===== Switch del modo claro/oscuro ===== */
+.theme-toggle {
+  width: 50px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 25px;
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  padding: 3px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  z-index: 9999;
+}
+
+.toggle-circle {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  transform: translateX(25px);
+}
+
+body.dark-mode .theme-toggle {
+  background-color: #666;
+}
+
+body.dark-mode .toggle-circle {
+  transform: translateX(0);
+}
+
+/* ===== Transiciones suaves ===== */
+body, button, input, textarea, select, .card, .container, header, main, section {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+/* ===== Estilos generales modo claro ===== */
+body {
+  background-color: #f8f8f8;
+  color: #222;
+}
+
+/* ===== Modo oscuro ===== */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* ===== Contenedores y secciones ===== */
+body.dark-mode header,
+body.dark-mode nav,
+body.dark-mode footer,
+body.dark-mode main,
+body.dark-mode section,
+body.dark-mode .container,
+body.dark-mode .card,
+body.dark-mode .panel,
+body.dark-mode .box,
+body.dark-mode .actividad,
+body.dark-mode table {
+  background-color: #1e1e1e !important;
+  color: #f0f0f0 !important;
+  border-color: #333 !important;
+}
+
+/* ===== Textos ===== */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode label {
+  color: #f0f0f0 !important;
+}
+
+/* ===== Botones ===== */
+body.dark-mode button,
+body.dark-mode .btn {
+  background-color: #333 !important;
+  color: #f0f0f0 !important;
+  border: 1px solid #555 !important;
+}
+
+body.dark-mode button:hover,
+body.dark-mode .btn:hover {
+  background-color: #444 !important;
+}
+
+/* ===== Inputs, selects y textareas ===== */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background-color: #222 !important;
+  color: #fff !important;
+  border: 1px solid #555 !important;
+}
+
+/* ===== Tablas ===== */
+body.dark-mode th,
+body.dark-mode td {
+  background-color: #222 !important;
+  color: #ddd !important;
+}

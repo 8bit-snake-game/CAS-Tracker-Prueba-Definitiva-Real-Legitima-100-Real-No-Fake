@@ -421,7 +421,7 @@ if (localStorage.getItem('darkMode') === 'enabled') {
   toggleSwitch.checked = true;
 }
 
-// Evento del switch
+
 toggleSwitch.addEventListener('change', () => {
   if (toggleSwitch.checked) {
     document.body.classList.add('dark-mode');
